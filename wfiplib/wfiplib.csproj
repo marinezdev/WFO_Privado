@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{670656E4-20DC-4DD8-BFD4-0B6F5FC04F01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wfiplib</RootNamespace>
+    <AssemblyName>wfiplib</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\repos\WFO_Privado3\wfip\bin\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.2">
+      <HintPath>..\..\repos\WFO Publico3\WFO Publico\WFO\WFO\bin\DevExpress.Data.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v17.2">
+      <HintPath>..\..\repos\WFO Publico3\WFO Publico\WFO\WFO\bin\DevExpress.Web.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\repos\WFO Publico3\WFO Publico\WFO\WFO\bin\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\repos\WFO_Privado3\wfip\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admAgentesPromotoria.cs" />
+    <Compile Include="admArchivosDependenciasEstados.cs" />
+    <Compile Include="admArchivosTramite.cs" />
+    <Compile Include="admAseguradosTitulares.cs" />
+    <Compile Include="admAutentificar.cs" />
+    <Compile Include="admBuscar.cs" />
+    <Compile Include="admArchivosDependencias.cs" />
+    <Compile Include="AdmBuzon.cs" />
+    <Compile Include="AdmBuzonTramite.cs" />
+    <Compile Include="admCartas.cs" />
+    <Compile Include="admCatAgentes.cs" />
+    <Compile Include="admCatAreas.cs" />
+    <Compile Include="admCatCiudad.cs" />
+    <Compile Include="admCatCodigoPostal.cs" />
+    <Compile Include="admCatDocumento.cs" />
+    <Compile Include="admCatEstados.cs" />
+    <Compile Include="admCatEtapas.cs" />
+    <Compile Include="admCatInstituciones.cs" />
+    <Compile Include="admCatMensajes.cs" />
+    <Compile Include="admCatMoneda.cs" />
+    <Compile Include="admCatMotivosRechazo.cs" />
+    <Compile Include="admCatPrioridad.cs" />
+    <Compile Include="admCatPromotoria.cs" />
+    <Compile Include="admCatProveedor.cs" />
+    <Compile Include="admCatTiposRechazo.cs" />
+    <Compile Include="admCat_Proveedor.cs" />
+    <Compile Include="admChecks.cs" />
+    <Compile Include="admCoasegurados.cs" />
+    <Compile Include="admConfiguracion.cs" />
+    <Compile Include="admConfiguracionGeneral.cs" />
+    <Compile Include="admCredencial.cs" />
+    <Compile Include="admDependencias.cs" />
+    <Compile Include="admDirectorio.cs" />
+    <Compile Include="admEmisionGmm.cs" />
+    <Compile Include="admEmisionVG.cs" />
+    <Compile Include="admEmisionVida.cs" />
+    <Compile Include="admEntidadFederativa.cs" />
+    <Compile Include="admExpediente.cs" />
+    <Compile Include="admIndicadores.cs" />
+    <Compile Include="admInsumos.cs" />
+    <Compile Include="admMesaCondicion.cs" />
+    <Compile Include="admModulos.cs" />
+    <Compile Include="admMunicipios.cs" />
+    <Compile Include="admPdfFusion.cs" />
+    <Compile Include="admPermisos.cs" />
+    <Compile Include="admPolizas.cs" />
+    <Compile Include="admPolizasDetalle.cs" />
+    <Compile Include="admPLAD.cs" />
+    <Compile Include="admPolizasDetalleConsolidado.cs" />
+    <Compile Include="admRoles.cs" />
+    <Compile Include="admRolesDependencias.cs" />
+    <Compile Include="admSeguridad.cs" />
+    <Compile Include="admSeleccion.cs" />
+    <Compile Include="admServiciosUtiler.cs" />
+    <Compile Include="AdmSolicitudGrupal.cs" />
+    <Compile Include="admStatusTramite.cs" />
+    <Compile Include="admTarifaPlanBasicoTitulares.cs" />
+    <Compile Include="admTiposServicios.cs" />
+    <Compile Include="admTipoTramite.cs" />
+    <Compile Include="admTipoTramiteCampo.cs" />
+    <Compile Include="admFlujo.cs" />
+    <Compile Include="admMesa.cs" />
+    <Compile Include="admNuevoVida.cs" />
+    <Compile Include="admServicioGmm.cs" />
+    <Compile Include="admServiciosVida.cs" />
+    <Compile Include="admTipoTramiteDoctos.cs" />
+    <Compile Include="admTipoTramiteMov.cs" />
+    <Compile Include="admTramite.cs" />
+    <Compile Include="admBitacora.cs" />
+    <Compile Include="admDocumento.cs" />
+    <Compile Include="admTramiteDetatlle.cs" />
+    <Compile Include="admTramiteMesa.cs" />
+    <Compile Include="admTramiteRechazo.cs" />
+    <Compile Include="admUsuarioFlujos.cs" />
+    <Compile Include="admUsuarioMesa.cs" />
+    <Compile Include="admUsuariosPromotoriaPrimierIngreso.cs" />
+    <Compile Include="admCatProductos.cs" />
+    <Compile Include="admWFOSiguienteTramite.cs" />
+    <Compile Include="AnexoArchivos.cs" />
+    <Compile Include="Archivos.cs" />
+    <Compile Include="ArchivosDependenciasAsignados.cs" />
+    <Compile Include="BaseDeDatos.cs" />
+    <Compile Include="bd.cs" />
+    <Compile Include="Checks.cs" />
+    <Compile Include="Cifrado.cs" />
+    <Compile Include="Concentrado.cs" />
+    <Compile Include="ConcentradoLaboratorios.cs" />
+    <Compile Include="Connected Services\EnviaCorreos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WSautentificar\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Correo.cs" />
+    <Compile Include="CorreoGoogle.cs" />
+    <Compile Include="dbSQLServer.cs" />
+    <Compile Include="EmisionVG.cs" />
+    <Compile Include="ExportarAExcel.cs" />
+    <Compile Include="ExtensionPaqueteriaExcel.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="InstitucionalTablas.cs" />
+    <Compile Include="InsEmisionGmm.cs" />
+    <Compile Include="LlenarControles.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="NReportes.cs" />
+    <Compile Include="PLAD.cs" />
+    <Compile Include="Seleccion.cs" />
+    <Compile Include="ServicioGmmP.cs" />
+    <Compile Include="serviciosVidaP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes.cs" />
+    <Compile Include="admCatSubProductos.cs" />
+    <Compile Include="Tablas\AbstractasABC.cs" />
+    <Compile Include="Tablas\Comun.cs" />
+    <Compile Include="Tablas\Ejemplo.cs" />
+    <Compile Include="Tablas\Implementacion01.cs" />
+    <Compile Include="Tablas\Institucional\Privado\InsFolio.cs" />
+    <Compile Include="Tablas\Institucional\Privado\InsServicioDetalle.cs" />
+    <Compile Include="Tablas\Institucional\Privado\InsServicios.cs" />
+    <Compile Include="Tablas\Institucional\Privado\InsTipoTramite.cs" />
+    <Compile Include="Tablas\Institucional\Privado\InsTramite.cs" />
+    <Compile Include="Tablas\Institucional\Privado\InsTramiteMesa.cs" />
+    <Compile Include="TiemposOperacion.cs" />
+    <Compile Include="tramiteDetalle.cs" />
+    <Compile Include="tramiteP.cs" />
+    <Compile Include="UsuariosMtto.cs" />
+    <Compile Include="utilerias.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tablas\Institucional\Publico\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\EnviaCorreos\ServicioCorreo.wsdl" />
+    <None Include="Connected Services\EnviaCorreos\ServicioCorreo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EnviaCorreos\ServicioCorreo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSautentificar\Autentificar1.wsdl" />
+    <None Include="Connected Services\WSautentificar\wfiplib.WSautentificar.AccesoUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSautentificar\wfiplib.WSautentificar.ConsultasUsuaio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\EnviaCorreos\" />
+    <WCFMetadataStorage Include="Connected Services\WSautentificar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EnviaCorreos\ServicioCorreo.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EnviaCorreos\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EnviaCorreos\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EnviaCorreos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSautentificar\configuration91.svcinfo" />
+    <None Include="Connected Services\WSautentificar\configuration.svcinfo" />
+    <None Include="Connected Services\WSautentificar\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WSautentificar\Autentificar1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

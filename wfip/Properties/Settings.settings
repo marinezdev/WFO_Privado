@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="wfip.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="dirAlmacenDocumentos" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Metlife\wfip\</Value>
+    </Setting>
+    <Setting Name="urlDoctosWeb" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:52392/DocsDown/</Value>
+    </Setting>
+    <Setting Name="dirCargaArchivos" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DocsUp\</Value>
+    </Setting>
+    <Setting Name="errLog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\errorlog\</Value>
+    </Setting>
+    <Setting Name="dirDoctosWeb" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\wfip\DocsDown\</Value>
+    </Setting>
+    <Setting Name="promotoriaPrueba" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">832</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

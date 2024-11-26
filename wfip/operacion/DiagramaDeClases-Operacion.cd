@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Página consultaTramite.aspx">
+    <Position X="26.069" Y="2.308" Height="0.394" Width="1.803" />
+  </Comment>
+  <Comment CommentText="Página esperaOperacion.aspx">
+    <Position X="17.478" Y="2.307" Height="0.394" Width="1.899" />
+  </Comment>
+  <Comment CommentText="Página anexoDocumento.aspx">
+    <Position X="32.362" Y="2.286" Height="0.394" Width="1.982" />
+  </Comment>
+  <Class Name="wfip.operacion.operacion">
+    <Position X="24" Y="0.5" Width="1.75" />
+    <Members>
+      <Field Name="btnSalirSistema" Hidden="true" />
+      <Field Name="cph_areaTrabajo" Hidden="true" />
+      <Field Name="cph_head" Hidden="true" />
+      <Field Name="form1" Hidden="true" />
+      <Field Name="lblMenu" Hidden="true" />
+      <Field Name="lbMstNombreUsuario" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgIAAAAIAACAgACAIAAAA=</HashCode>
+      <FileName>operacion\operacion.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="wfip.operacion.esperaOperacion">
+    <Position X="15.25" Y="2.25" Width="2" />
+    <Members>
+      <Field Name="DropShadowExtender2" Hidden="true" />
+      <Field Name="lt_jsMsg" Hidden="true" />
+      <Field Name="pnlMesas" Hidden="true" />
+      <Field Name="pnlMsgProcesando" Hidden="true" />
+      <Field Name="rpt_Mesas" Hidden="true" />
+      <Field Name="ScriptManager1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAYAAAAAAAUAAAAAABAABAAAAAAYAQAA=</HashCode>
+      <FileName>operacion\esperaOperacion.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="wfip.operacion.consultaTramite">
+    <Position X="23.5" Y="2.25" Width="2.5" />
+    <Members>
+      <Field Name="Archivo" Hidden="true" />
+      <Field Name="btnAceptar" Hidden="true" />
+      <Field Name="btnBitacoraPrivada" Hidden="true" />
+      <Field Name="btnBuscaFilio" Hidden="true" />
+      <Field Name="btnCtrlAplicaRechazo" Hidden="true" />
+      <Field Name="btnHold" Hidden="true" />
+      <Field Name="btnMuestraBitacora" Hidden="true" />
+      <Field Name="btnMuestraInsumos" Hidden="true" />
+      <Field Name="btnMuestraPop" Hidden="true" />
+      <Field Name="btnPausa" Hidden="true" />
+      <Field Name="btnRechazar" Hidden="true" />
+      <Field Name="btnReenviar" Hidden="true" />
+      <Field Name="btnSuspender" Hidden="true" />
+      <Field Name="ft_txNombreABuscar" Hidden="true" />
+      <Field Name="hdArchivo" Hidden="true" />
+      <Field Name="hdEnLinea" Hidden="true" />
+      <Field Name="hdIdTramite" Hidden="true" />
+      <Field Name="hfCadenaMotivosRechazo" Hidden="true" />
+      <Field Name="hfIdArchivo" Hidden="true" />
+      <Field Name="hfModoRechazo" Hidden="true" />
+      <Field Name="lbFechaRegistroAntecedente" Hidden="true" />
+      <Field Name="lbFechaRegistroBusca" Hidden="true" />
+      <Field Name="lbFolioAntecedente" Hidden="true" />
+      <Field Name="lbFolioBusca" Hidden="true" />
+      <Field Name="lbNmMesa" Hidden="true" />
+      <Field Name="lbNoExiste" Hidden="true" />
+      <Field Name="lbNombreABuscar" Hidden="true" />
+      <Field Name="lbTramiteNombreAntecedente" Hidden="true" />
+      <Field Name="lbTramiteNombreBusca" Hidden="true" />
+      <Field Name="lnkModificar" Hidden="true" />
+      <Field Name="lnkOcultaDocumento" Hidden="true" />
+      <Field Name="lsChApoyo" Hidden="true" />
+      <Field Name="lstMotivosRechazo" Hidden="true" />
+      <Field Name="lt_jsMsg" Hidden="true" />
+      <Field Name="ltBitacora" Hidden="true" />
+      <Field Name="ltBitacoraAntecedente" Hidden="true" />
+      <Field Name="ltBitacoraBusca" Hidden="true" />
+      <Field Name="ltBitacoraPrivada" Hidden="true" />
+      <Field Name="ltDatosContratanteAntecedente" Hidden="true" />
+      <Field Name="ltDatosContratanteBusca" Hidden="true" />
+      <Field Name="ltDocumentoAntecedente" Hidden="true" />
+      <Field Name="ltDocumentoBusca" Hidden="true" />
+      <Field Name="ltInfContratante" Hidden="true" />
+      <Field Name="ltInfTipoTramite" Hidden="true" />
+      <Field Name="ltMuestraPdf" Hidden="true" />
+      <Field Name="ltPdfPop" Hidden="true" />
+      <Field Name="pnConApoyo" Hidden="true" />
+      <Field Name="pnInsumos" Hidden="true" />
+      <Field Name="pnlAntecedentes" Hidden="true" />
+      <Field Name="pnlCallbackMotRechazo" Hidden="true" />
+      <Field Name="pnlDatosAntededente" Hidden="true" />
+      <Field Name="pnlDatosTramiteBusca" Hidden="true" />
+      <Field Name="pnlDocAntecedente" Hidden="true" />
+      <Field Name="pnlDocumentoBusca" Hidden="true" />
+      <Field Name="pnlGrdResultadosBusca" Hidden="true" />
+      <Field Name="pnlMsgProcesando" Hidden="true" />
+      <Field Name="pnlPopMovitosRechazo" Hidden="true" />
+      <Field Name="pnlTabAntecedentes" Hidden="true" />
+      <Field Name="pnlTabBuscar" Hidden="true" />
+      <Field Name="pnlTablTramiteTrabajo" Hidden="true" />
+      <Field Name="pnlUpBuscaTrmt" Hidden="true" />
+      <Field Name="popBitacora" Hidden="true" />
+      <Field Name="popBitacoraPrivada" Hidden="true" />
+      <Field Name="popDocumento" Hidden="true" />
+      <Field Name="PopInsumos" Hidden="true" />
+      <Field Name="rfv_txComentarios" Hidden="true" />
+      <Field Name="rfv_txComentariosPrv" Hidden="true" />
+      <Field Name="rpt_Antecedentes" Hidden="true" />
+      <Field Name="rptInsumos" Hidden="true" />
+      <Field Name="rptTrmResBusca" Hidden="true" />
+      <Field Name="ScriptManager1" Hidden="true" />
+      <Field Name="tabGeneral" Hidden="true" />
+      <Field Name="txComentarios" Hidden="true" />
+      <Field Name="txComentariosPrv" Hidden="true" />
+      <Field Name="txNombreABuscar" Hidden="true" />
+      <Field Name="upPnlAntecedente" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>YgEdQYEdXHCCRJkBRg4MonATlBRKloRjACp6AG4HRIA=</HashCode>
+      <FileName>operacion\consultaTramite.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="wfip.operacion.anexoDocumento">
+    <Position X="30" Y="2.25" Width="2.25" />
+    <Members>
+      <Field Name="BtnCancelar" Hidden="true" />
+      <Field Name="BtnContinuar" Hidden="true" />
+      <Field Name="btnEliminaDocumento" Hidden="true" />
+      <Field Name="btnEliminaInsumo" Hidden="true" />
+      <Field Name="btnSubirDocumento" Hidden="true" />
+      <Field Name="btnSubirInsumo" Hidden="true" />
+      <Field Name="fileUpDocumento" Hidden="true" />
+      <Field Name="fileUpInsumo" Hidden="true" />
+      <Field Name="lstDocumentos" Hidden="true" />
+      <Field Name="lstInsumos" Hidden="true" />
+      <Field Name="lt_jsMsg" Hidden="true" />
+      <Field Name="ltInfContratante" Hidden="true" />
+      <Field Name="mIdMesa" Hidden="true" />
+      <Field Name="mIdTramite" Hidden="true" />
+      <Field Name="PnlArchivosAnexos" Hidden="true" />
+      <Field Name="rev_fileUpDocumento" Hidden="true" />
+      <Field Name="rpObsrv" Hidden="true" />
+      <Field Name="ScriptManager1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QwIAgICAARQEAJIAAiAAAUAAAAAAAKCBAIEAHCIAACA=</HashCode>
+      <FileName>operacion\anexoDocumento.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="wfiplib.admCredencial">
+    <Position X="12.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.credencial">
+    <Position X="15" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.admFlujo">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.flujo">
+    <Position X="18.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.admTramiteMesa">
+    <Position X="12.5" Y="10.75" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.tramiteMesa">
+    <Position X="15.5" Y="10.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.admMesa">
+    <Position X="23.75" Y="10.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.mesa">
+    <Position X="29.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.csFlujoTemp">
+    <Position X="25.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.FlujoTemp">
+    <Position X="27.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.admUsuarioMesa">
+    <Position X="31" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.usuarioMesa">
+    <Position X="32.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.admTramite">
+    <Position X="17.5" Y="10.75" Width="3.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="wfiplib.tramite">
+    <Position X="21.5" Y="10.75" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="inicioSupervisor.master.cs" Inherits="wfip.supervision.inicioSupervisorM" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-combined.min.js"></script>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <script>
+                (function($){
+	                $(document).ready(function(){
+		                $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+			                event.preventDefault(); 
+			                event.stopPropagation(); 
+			                $(this).parent().siblings().removeClass('open');
+			                $(this).parent().toggleClass('open');
+		                });
+	                });
+                })(jQuery);
+            </script>
+    <script type="text/javascript">
+        history.forward();
+        document.oncontextmenu = function () { return false }
+        function disableEnterKey(e) {
+            var key;
+            if (window.event) { key = window.event.keyCode; } //IE 
+            else { key = e.which; } //firefox
+            return (key != 13);
+        }
+    </script>
+    <link href="../css/menuv2.css" rel="stylesheet" />
+   <!-- <link rel="stylesheet" href="../css/metro-bootstrap.css" media="screen" /> -->
+    <asp:ContentPlaceHolder ID="cph_head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ <div class="container-fluid">
+    <form id="form1" runat="server">
+        <div class="panel panel-default">
+            <div class="pri-nav">
+                <div class="container">
+                    
+                    <div class="row barra" >
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <img src="../img/1280px-MetLife_logo.svg.png" alt="10px" width="200" class="img-thumbnail">
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                            <asp:Label runat="server" ID="lblTituloSistema" Text="Título del Sistema" Font-Bold="True" Font-Names="Arial" Font-Size="28px" ForeColor="#007CC3"></asp:Label>
+                            <br />
+                            <asp:Label runat="server" ID="lblSubTituloSistema" Text="Sub - Título del Sistema" Font-Bold="True" Font-Names="Arial" Font-Size="12px"></asp:Label>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 text-right">
+                            <asp:Label ID="lbMstNombrePromotora" runat="server" Font-Size="8px"></asp:Label><br />
+                            <asp:Label ID="lbMstNombreUsuario" runat="server" Font-Bold="True" Font-Names="Arial" Font-Size="11px"></asp:Label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div id="header-area" class="header_area">
+                <div class="header_bottom">
+                    <div class="container">
+                        <div class="row">
+                            <asp:Label ID="lblMenu" runat="server"></asp:Label>
+                                
+                        </div> 
+                    </div>            
+                </div><!-- /.header_bottom -->
+            </div>
+            <asp:ContentPlaceHolder ID="cph_areaTrabajo" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+ </div>
+
+<script type="text/javascript">
+        Sys.WebForms.Menu._elementObjectMapper.getMappedObject = function () {
+        return false;
+    };
+    $(function () {
+       // debugger;
+        $(".navbar-nav li, .navbar-nav a, .navbar-nav ul").removeAttr('style');
+        $(".dropdown-menu").closest("li").removeClass().addClass("dropdown-toggle");
+        $(".dropdown-toggle").find("a[href='javascript:;']").attr("data-toggle", "dropdown");
+        $(".dropdown-toggle").find("a[href='javascript:;'].level1").append("<span class='caret'></span>");
+        $(".dropdown-toggle").find("a[href='javascript:;']:not(.level1)").closest('li').addClass('dropdown-submenu');
+        $("a.selected").closest("li").addClass("active");
+        $("a.selected").closest(".dropdown-toggle").addClass("active");
+        $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $(this).parent().siblings().removeClass('open');
+            $(this).parent().toggleClass('open');
+        });
+    });
+</script>  
+</body>
+</html>

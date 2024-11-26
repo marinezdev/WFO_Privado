@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="devExpress">
+      <section name="themes" type="DevExpress.Web.ThemesConfigurationSection, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+      <section name="compression" type="DevExpress.Web.CompressionConfigurationSection, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+      <section name="settings" type="DevExpress.Web.SettingsConfigurationSection, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+      <section name="errors" type="DevExpress.Web.ErrorsConfigurationSection, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+      <section name="resources" type="DevExpress.Web.ResourcesConfigurationSection, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="appName" value="Met Work Tool" />
+    <add key="appSubName" value="Flujo de Trabajo de MetLife" />
+    <add key="PaginaWebPublicada" value="https://www.cloud-asae.com.mx/fto/" />
+    <add key="ChartImageHandler" value="storage=file;timeout=20;dir=c:\TempImageFiles\;"/>
+    <add key="MenuDinamico" value="N"/>
+  </appSettings>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <handlers>
+      <remove name="ChartImageHandler"/>
+      <add name="ChartImageHandler" preCondition="integratedMode" verb="GET,HEAD,POST" path="ChartImg.axd" type="System.Web.UI.DataVisualization.Charting.ChartHttpHandler, System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="DX.ashx" name="ASPxHttpHandlerModule" preCondition="integratedMode"/>
+      <add name="ASPxUploadProgressHandler" preCondition="integratedMode" verb="GET,POST" path="ASPxUploadProgressHandlerPage.ashx" type="DevExpress.Web.ASPxUploadProgressHttpHandler, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"/>
+      <add name="ASPxChartDesignerHandlerModule" preCondition="integratedMode" verb="GET,POST" path="DXXCD.axd" type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"/>
+    </handlers>
+    <modules>
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule"/>
+    </modules>
+    <security>
+      <requestFiltering>
+        <requestLimits maxAllowedContentLength="104857600"/>
+      </requestFiltering>
+    </security>
+  </system.webServer>
+  <system.web>
+    <httpCookies requireSSL="false"/>
+    <customErrors mode="Off" defaultRedirect="~/errorSistema.aspx"/>
+    <httpHandlers>
+      <add path="ChartImg.axd" verb="GET,HEAD,POST" type="System.Web.UI.DataVisualization.Charting.ChartHttpHandler, System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false"/>
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="DX.ashx" validate="false"/>
+      <add verb="GET,POST" path="ASPxUploadProgressHandlerPage.ashx" type="DevExpress.Web.ASPxUploadProgressHttpHandler, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"/>
+      <add validate="false" verb="GET,POST" path="DXXCD.axd" type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"/>
+    </httpHandlers>
+    <pages>
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI.DataVisualization.Charting" assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      </controls>
+    </pages>
+    <compilation targetFramework="4.0" debug="true">
+      <assemblies>
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="DevExpress.Web.ASPxGauges.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.XtraGauges.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Data.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Printing.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Web.ASPxThemes.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"/>
+        <add assembly="DevExpress.RichEdit.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Web.ASPxTreeList.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="DevExpress.XtraCharts.v17.2.Web, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.XtraCharts.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Charts.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Web.Resources.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Web.ASPxRichEdit.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Office.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <!--<add assembly="DevExpress.Web.ASPxSpellChecker.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A" />-->
+        <add assembly="DevExpress.SpellChecker.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.Web.ASPxScheduler.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+        <add assembly="DevExpress.XtraScheduler.v17.2.Core, Version=17.2.3.0, Culture=neutral, PublicKeyToken=B88D1754D700E49A"/>
+      </assemblies>
+    </compilation>
+    <httpModules>
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule"/>
+    </httpModules>
+    <globalization uiCulture="es" culture="es-MX"/>
+    <httpRuntime executionTimeout="10800" maxRequestLength="2097151" enableHeaderChecking="false" requestLengthDiskThreshold="2097150" requireRootedSaveAsPath="false"/>
+    <sessionState timeout="60"/>
+  </system.web>
+  <connectionStrings>
+    <add name="conecta_bd" connectionString="Server=.\SQLEXPRESS;Initial Catalog=wfip;User ID=sa;Password=D3s4rr0ll0_;"/>
+  </connectionStrings>
+  <devExpress>
+    <themes enableThemesAssembly="true" styleSheetTheme="" theme="" customThemeAssemblies="" baseColor="" font=""/>
+    <compression enableHtmlCompression="false" enableCallbackCompression="true" enableResourceCompression="true" enableResourceMerging="true"/>
+    <settings doctypeMode="Xhtml" rightToLeft="false" accessibilityCompliant="false" checkReferencesToExternalScripts="false" protectControlState="true" ieCompatibilityVersion="edge" bootstrapMode="Bootstrap3"/>
+    <errors callbackErrorRedirectUrl=""/>
+  </devExpress>
+</configuration>
+<!--ProjectGuid: 8C61F49D-F4B0-4A5B-8AFF-EF99EFB5F244-->
